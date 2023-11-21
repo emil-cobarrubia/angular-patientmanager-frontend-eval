@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
+## Disclaimer
+This application is intended to be for evaluation and educational purposes only. This should not be used for processing or holding real data.
+
 ## Ensure the ASP.NET Web APIs are running
 After successfully walking through the README in `PatientManager-API-BackEnd-Eval` repository [here](https://github.com/emilcobarrubia/PatientManager-API-BackEnd-Eval), you can proceed below.  
 If the back-end is not up, no data will be displayed in the application.
