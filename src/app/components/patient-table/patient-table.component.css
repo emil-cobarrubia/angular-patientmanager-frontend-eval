@@ -1,0 +1,65 @@
+table {
+    width: 100%;
+  }
+
+  .mat-table {
+    overflow-x: scroll;
+  }
+
+  .headerButton{
+    margin-right: 1rem;
+  } 
+
+  .filterContainer{
+    width: 100%;
+    background: transparent;
+    
+  }
+
+  .filterIcon{
+    align-items: center;
+    color: #3f51b5
+  }
+
+  .filterField{
+    width: 100%;
+    max-width: 700px;
+    /* display: flex; */
+    align-items: center;
+    border-radius: 10px;
+
+    flex: 1;
+    border: 0;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: black;
+    background-color: #dadef2;
+  }
+
+.divider {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    color: transparent;
+}
+
+.upload{
+    font-weight:bold;
+    color:#28a745;
+    margin-left: 15px;
+    line-height: 36px;
+  }
+
+  .deleteActions{
+    width: 100%;
+
+    button
+    {
+        position:absolute;
+        right: 0%;
+    }
+  }
+
+.tableButton{
+    margin-left: 0px;
+}  

@@ -1,0 +1,27 @@
+h1{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+form{
+    width: 500px;
+    height: 200px;
+}
+
+.message{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 16px;
+}
+
+.button-row{
+    position: absolute;
+    margin-bottom: 5%;
+    margin-left: 25%;
+    bottom: 0;
+}
+
+.formButton{
+    margin-left: 16px;
+    width: 100px;
+}

@@ -1,0 +1,87 @@
+<div class="button-row">
+    <div class="row" style="margin-bottom:15px;">
+        <div class="col-md-3">
+            <span>
+                <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+                <button class="headerButton" mat-flat-button color="primary" (click)="file.click()">
+                      <mat-icon>upload</mat-icon>
+                      Upload File
+                  </button>
+                  <button class="headerButton" mat-flat-button color="primary" (click)="addNewPatientDialog()"> 
+                      <mat-icon>add</mat-icon>
+                      New Patient
+                  </button>
+                  <button class="headerButton" mat-flat-button color="primary" (click)="getPatients()"> 
+                      <mat-icon>refresh</mat-icon>
+                      Refresh
+                  </button>
+            </span>
+            <span class="deleteActions">
+                <button class="headerButton" mat-flat-button color="warn" (click)="confirmDeleteAllPatients()"> 
+                    <mat-icon>delete_forever</mat-icon>
+                    Delete All
+                </button>
+            </span>
+        </div>
+</div>
+<mat-divider class="divider"></mat-divider>
+<div>
+    <div class="filterContainer">
+        <input class="filterField" matInput (keyup)="filter($event)" placeholder="Search">
+    </div>
+</div>
+<mat-divider class="divider"></mat-divider>
+<div>
+    <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="pid">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Patient ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.pid}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="firstName">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> First Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="lastName">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Last Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="birthDate">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Birthday </th>
+            <td mat-cell *matCellDef="let element"> {{element.birthDate | date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ageYears">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Age (Years) </th>
+            <td mat-cell *matCellDef="let element"> {{element.ageYears}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="gender">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Gender </th>
+            <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let element">
+                <button class="tableButton" mat-icon-button color="primary" (click)="modifyPatientDialog(element.pid)"> 
+                    <mat-icon>edit</mat-icon>
+                    
+                </button>
+                <button class="tableButton" mat-icon-button color="warn" (click)="confirmDeletePatient(element)"> 
+                    <mat-icon>delete_forever</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+<mat-divider class="divider"></mat-divider>
+<div>
+    <mat-paginator [pageSizeOptions]="[10,20,50]" showFirstLastButtons=""></mat-paginator>
+</div>

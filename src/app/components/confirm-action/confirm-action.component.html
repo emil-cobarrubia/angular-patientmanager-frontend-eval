@@ -1,0 +1,17 @@
+<h1>{{inputParams.title}}</h1>
+<form>
+    <div class="message">
+       <p>{{inputParams.message}}</p>
+    </div>
+    
+    <div class="button-row">
+        <button class="formButton" mat-flat-button color="primary" (click)="proceed()"> 
+            Yes
+        </button>
+        <button class="formButton" type="button" mat-flat-button color="warn"
+            (click)="cancelDialog()"> <!-- Assign different type, i.e. button. All buttons default to submit w NgSubmit -->
+            Close
+        </button>
+    </div>
+</form>
+

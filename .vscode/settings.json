@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/c9037b1a-9b4a-44da-be99-63bdd32bf5f6/resourceGroups/rg-dev-patientList_testEval/providers/Microsoft.Web/sites/angular-patientmanager-eval",
+    "appService.deploySubpath": "dist\\angular-patientmanager-frontend-eval"
+}

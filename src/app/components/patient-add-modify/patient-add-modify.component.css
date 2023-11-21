@@ -1,0 +1,27 @@
+h1{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+form{
+    width: 800px;
+    height: 500px;
+}
+
+.formField{
+    margin-top: 12px;
+    margin-left: 32px;
+    width: 730px;
+}
+
+.button-row{
+    position: absolute;
+    margin-bottom: 5%;
+    margin-left: 35%;
+    bottom: 0;
+}
+
+.formButton{
+    margin-left: 16px;
+    width: 100px;
+}

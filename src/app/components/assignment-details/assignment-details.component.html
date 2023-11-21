@@ -1,0 +1,24 @@
+<h1>Assignment</h1>
+<mat-divider></mat-divider>
+<div>
+    <p class="assignmentDetail">
+        Please create a responsive web application that will have an upload view that accepts CSV files with
+        patient records as input (see CSV sample file attached), and a view that displays the patients already
+        uploaded to the application with basic ordering and filtering by patient name. Once uploaded, each
+        patient record should be editable.
+        The app must have the following:
+    </p>
+    <ul class="assignmentBullets">
+        <li>Backend Web API written in .NET 6 C#.</li>
+        <li>Frontend written in Angular 12 or higher.</li>
+        <li>Data uploaded can be stored in SQL and should not be volatile (survive a restart).</li>
+    </ul>
+    <p class="assignmentCloseout">
+        Your app will be graded on best practices in coding, testing, validation techniques, architecture, UX and
+        UI.
+    </p>
+    <button class="downloadExample" mat-flat-button color="primary" (click)="downloadFile()">
+        <mat-icon>download</mat-icon>
+        Download Example CSV
+    </button>
+</div>
