@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { AppComponent } from './app.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MaterialModule } from './material/material.module';
@@ -18,24 +18,17 @@ import { ConfirmActionComponent } from './components/confirm-action/confirm-acti
 import { SidenavEnhComponent } from './components/sidenav-enh/sidenav-enh.component';
 
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    SvgIconComponent,
-    PatientTableComponent,
-    ButtonFileUploadComponent,
-    PatientAddModifyComponent,
-    AssignmentDetailsComponent,
-    AboutmeComponent,
-    ConfirmActionComponent,
-    SidenavEnhComponent
-    
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule, HttpClientModule, AppRoutingModule, MaterialModule, MatIconModule, BrowserAnimationsModule, ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        SvgIconComponent,
+        PatientTableComponent,
+        ButtonFileUploadComponent,
+        PatientAddModifyComponent,
+        AssignmentDetailsComponent,
+        AboutmeComponent,
+        ConfirmActionComponent,
+        SidenavEnhComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        FormsModule, AppRoutingModule, MaterialModule, MatIconModule, BrowserAnimationsModule, ReactiveFormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
