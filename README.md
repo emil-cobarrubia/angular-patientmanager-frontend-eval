@@ -3,10 +3,6 @@
 ## Disclaimer
 This application is intended to be for educational purposes only. This should not be used for processing or holding real data.
 
-## Ensure the ASP.NET Web APIs are running
-After successfully walking through the README in `PatientManager-API-BackEnd-Eval` repository [here](https://github.com/emilcobarrubia/PatientManager-API-BackEnd-Eval), you can proceed below.  
-If the back-end is not up, no data will be displayed in the application.
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
