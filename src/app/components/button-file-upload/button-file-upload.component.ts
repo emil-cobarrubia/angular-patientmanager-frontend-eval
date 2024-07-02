@@ -29,7 +29,7 @@ export class ButtonFileUploadComponent implements OnInit {
     
     this.http.post('https://localhost:7191/api/FileUpload', formData, {reportProgress: true, observe: 'events'})
       .subscribe({
-        next: (event?) => {
+        next: (event) => {
         if (event.type === HttpEventType.UploadProgress)
         {
           let total = (event.total == null) ? 1 : event.total;
