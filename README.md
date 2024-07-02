@@ -1,10 +1,7 @@
-[![Board Status](https://supercoolsoftware.visualstudio.com/09828300-97b1-4f3b-a4d0-a8a691cee35c/b5ba604e-383b-4ca6-85a0-899fe4bc8356/_apis/work/boardbadge/d85a20e8-730d-4c8c-aa18-b4dc2c0a52c0)](https://supercoolsoftware.visualstudio.com/09828300-97b1-4f3b-a4d0-a8a691cee35c/_boards/board/t/b5ba604e-383b-4ca6-85a0-899fe4bc8356/Microsoft.RequirementCategory)
-# AngularPatientmanagerFrontendEval
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+# # tutorials-file-upload-fe-web
 
 ## Disclaimer
-This application is intended to be for evaluation and educational purposes only. This should not be used for processing or holding real data.
+This application is intended to be for educational purposes only. This should not be used for processing or holding real data.
 
 ## Ensure the ASP.NET Web APIs are running
 After successfully walking through the README in `PatientManager-API-BackEnd-Eval` repository [here](https://github.com/emilcobarrubia/PatientManager-API-BackEnd-Eval), you can proceed below.  
